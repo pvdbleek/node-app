@@ -20,16 +20,16 @@ spec:
         imagePullPolicy: IfNotPresent
         name: node-app
         ports:
-        - containerPort: 3000
+        - containerPort: 8080
         livenessProbe:
           httpGet:
             path: /health
-            port: 3000
+            port: 8080
           initialDelaySeconds: 3
           periodSeconds: 3
         readinessProbe:
           httpGet:
             path: /health
-            port: 3000
+            port: 8080
           initialDelaySeconds: 3
           periodSeconds: 3
